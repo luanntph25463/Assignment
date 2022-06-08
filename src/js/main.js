@@ -57,7 +57,7 @@ function showProduct(productss) {
         </div>
     </div>
      <div class="order-1 md:col-span-1 md:order-2 justify-self-end px-5 my-4 w-[400px]">
-        <img src="./src/img/${products.img}.jpg" class="mx-auto md:ml-auto w-full  rounded-full"  alt="" />
+        <img src="./src/img/${products.img}.jpg" class="mx-auto md:ml-auto w-full mx-16  rounded-full"  alt="" />
     </div>`;
     }
     // return
