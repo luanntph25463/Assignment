@@ -1,4 +1,4 @@
-import render from "./common";
+import { render } from "./common";
 import { works, pots, user } from "./data";
 
 // selector đến element product
@@ -9,24 +9,24 @@ function showProducts(products) {
 
     // xử lý
     let result = "";
+    // eslint-disable-next-line no-plusplus
     for (let i = 0; i < products.length; i++) {
         const product = products[i];
         result += `<div
-        class="grid grid-cols-1 md:grid-cols-3 gap-5 ease-in-out duration-300 hover:shadow-xl hover:cursor-pointer group">
+        class="border-b py-8 grid grid-cols-1 md:grid-cols-3 gap-5 ease-in-out duration-300 hover:shadow-xl hover:cursor-pointer group">
         <div class="col-span-1">
-           <a href="Works.html?id=${product.id}"> <img src="src/img/${product.img}.jpg" class="w-full" alt="" /></a>
+           <a href="worksdetail.html?id=${product.id}"> <img src="src/img/${product.img}.jpg" class="w-full" alt="" /></a>
         </div>
         <div class="col-span-2 items-center">
             <h2 class="font-medium text-4xl my-4">
-            <a href="Works.html?id=${product.id}">${product.title}</a>
+            <a href="worksdetail.html?id=${product.id}">${product.title}</a>
             </h2>
-            <p>
-                <a href="" class="px-2 rounded-lg bg-[#142850] text-white my-4">${product.date}
-                </a>
-            </p>
-            <a href="Works.html?id=${product.id}" class="font-bold text-2xl">${product.description}.</a>
+            <p class="my-6">
+                <a href="" class="px-2 rounded-full bg-[#142850] text-white my-4">${product.date}
+                </a> <span class="text-[#8695A4] px-6">${product.by}</span>
+                </p>
+            <a href="worksdetail.html?id=${product.id}" class="font-bold text-[16px] ">${product.description}.</a>
         </div>
-        <hr class="my-7 w-full font-bold" />
     </div>`;
     }
     // return
@@ -41,13 +41,14 @@ function showProduct(productss) {
 
     // xử lý
     let results = "";
+    // eslint-disable-next-line no-plusplus
     for (let i = 0; i < productss.length; i++) {
         const products = productss[i];
         results += `<div class="order-2 text-center md:text-left md:w-[606px]">
         <h2 class="font-bold text-6xl my-6">
             ${products.title}
         </h2>
-        <p class="font-medium text-xl my-4">
+        <p class="font-medium text-[16px] my-4">
             ${products.description}
         </p>
         <div class ="ease-in-out duration-300 hover:shadow-xl hover:cursor-pointer group">
@@ -72,6 +73,7 @@ function showProductz(productss) {
 
     // xử lý
     let resultsz = "";
+    // eslint-disable-next-line no-plusplus
     for (let i = 0; i < productss.length; i++) {
         const potss = productss[i];
         resultsz += `<div class="bg-white p-5 my-5 ease-in-out duration-300 hover:shadow-xl hover:cursor-pointer group">
@@ -80,8 +82,10 @@ function showProductz(productss) {
         </h2>
         <p class="font-bold text-xl py-6">
             ${potss.date}
+            <span>|</span>
+            <span> Design , Pattern </span>
         </p>
-        <a href="" class="py-6 font-bold">${potss.description}</a>
+        <a href="" class="py-6 font-bold text-[16px]">${potss.description}</a>
     </div>`;
     }
     // return
