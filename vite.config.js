@@ -5,10 +5,9 @@ module.exports = defineConfig({
     build: {
         rollupOptions: {
             input: {
-                main: resolve(__dirname, "index.html"),
-                works: resolve(__dirname, "works.html"),
-                blog: resolve(__dirname, "Blog.html"),
-                wdt: resolve(__dirname, "worksdetail.html"),
+                main: resolve(__dirname, "./index.html"),
+                detailProduct: resolve(__dirname, ".detail.html"),
+                products: resolve(__dirname, ".product.html"),
             },
         },
     },
