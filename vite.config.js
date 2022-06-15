@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 const { resolve } = require("path");
 const { defineConfig } = require("vite");
 
@@ -6,8 +7,9 @@ module.exports = defineConfig({
         rollupOptions: {
             input: {
                 main: resolve(__dirname, "./index.html"),
-                detailProduct: resolve(__dirname, ".detail.html"),
-                products: resolve(__dirname, ".product.html"),
+                works: resolve(__dirname, "./Works.html"),
+                blog: resolve(__dirname, "./Blog.html"),
+                wdt: resolve(__dirname, "./worksdetail.html"),
             },
         },
     },
