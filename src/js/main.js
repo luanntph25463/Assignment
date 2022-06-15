@@ -1,117 +1,21 @@
-<<<<<<< HEAD
-import { render } from "./common";
-import { works, pots, user } from "./data";
+import { render } from './common';
+import { works, pots, user } from './data';
 
 // selector đến element product
 // khai báo hàm show product
 function showProducts(products) {
-    // kiểm tra
-    if (!Array.isArray(works) || works.length === 0) return [];
+  // kiểm tra
+  if (!Array.isArray(works) || works.length === 0) return [];
 
-    // xử lý
-    let result = "";
-    // eslint-disable-next-line no-plusplus
-    for (let i = 0; i < products.length; i++) {
-        const product = products[i];
-        result += `<div
+  // xử lý
+  let result = '';
+  // eslint-disable-next-line no-plusplus
+  for (let i = 0; i < products.length; i++) {
+    const product = products[i];
+    result += `<div
         class="border-b py-8 grid grid-cols-1 md:grid-cols-3 gap-5 ease-in-out duration-300 hover:shadow-xl hover:cursor-pointer group">
         <div class="col-span-1">
-           <a href="worksdetail.html?id=${product.id}"> <img src="src/img/${product.img}.jpg" class="w-full" alt="" /></a>
-        </div>
-        <div class="col-span-2 items-center">
-            <h2 class="font-medium text-4xl my-4">
-            <a href="worksdetail.html?id=${product.id}">${product.title}</a>
-            </h2>
-            <p class="my-6">
-                <a href="" class="px-2 rounded-full bg-[#142850] text-white my-4">${product.date}
-                </a> <span class="text-[#8695A4] px-6">${product.by}</span>
-                </p>
-            <a href="worksdetail.html?id=${product.id}" class="font-bold text-[12px] md:text-[16px] ">${product.description}.</a>
-        </div>
-    </div>`;
-    }
-    // return
-    return result;
-}
-
-render("product", showProducts(works));
-
-function showProduct(productss) {
-    // kiểm tra
-    if (!Array.isArray(user) || user.length === 0) return [];
-
-    // xử lý
-    let results = "";
-    // eslint-disable-next-line no-plusplus
-    for (let i = 0; i < productss.length; i++) {
-        const products = productss[i];
-        results += `<div class="order-2 text-center md:text-left md:w-[606px]">
-        <h2 class="font-bold text-3xl md:text-6xl my-6">
-            ${products.title}
-        </h2>
-        <p class="font-medium text-[16px] my-4">
-            ${products.description}
-        </p>
-        <div class ="ease-in-out duration-300 hover:shadow-xl hover:cursor-pointer group">
-        <button class="my-5 bg-red-500 text-white text-xl font-bold px-4 py-2">
-            Download Resume
-        </button>
-        </div>
-    </div>
-     <div class="order-1 md:col-span-1 md:order-2 justify-self-end px-5 my-4 w-[400px]">
-        <img src="./src/img/${products.img}.jpg" class="mx-auto md:ml-auto md:-full mx-16 w-1/2  rounded-full"  alt="" />
-    </div>`;
-    }
-    // return
-    return results;
-}
-
-render("user", showProduct(user));
-
-function showProductz(productss) {
-    // kiểm tra
-    if (!Array.isArray(pots) || pots.length === 0) return [];
-
-    // xử lý
-    let resultsz = "";
-    // eslint-disable-next-line no-plusplus
-    for (let i = 0; i < productss.length; i++) {
-        const potss = productss[i];
-        resultsz += `<div class="bg-white p-5 my-5 ease-in-out duration-300 hover:shadow-xl hover:cursor-pointer group">
-        <h2 class="font-bold text-4xl py-3">
-            ${potss.title}
-        </h2>
-        <p class="font-bold text-xl py-6">
-            ${potss.date}
-            <span>|</span>
-            <span> Design , Pattern </span>
-        </p>
-        <a href="" class="py-6 font-bold text-[16px]">${potss.description}</a>
-    </div>`;
-    }
-    // return
-    return resultsz;
-}
-
-=======
-import { render } from "./common";
-import { works, pots, user } from "./data";
-
-// selector đến element product
-// khai báo hàm show product
-function showProducts(products) {
-    // kiểm tra
-    if (!Array.isArray(works) || works.length === 0) return [];
-
-    // xử lý
-    let result = "";
-    // eslint-disable-next-line no-plusplus
-    for (let i = 0; i < products.length; i++) {
-        const product = products[i];
-        result += `<div
-        class="border-b py-8 grid grid-cols-1 md:grid-cols-3 gap-5 ease-in-out duration-300 hover:shadow-xl hover:cursor-pointer group">
-        <div class="col-span-1">
-           <a href="worksdetail.html?id=${product.id}"> <img src="src/img/${product.img}.jpg" class="w-full" alt="" /></a>
+           <a href="worksdetail.html?id=${product.id}"> <img src="${product.img}" class="w-full" alt="" /></a>
         </div>
         <div class="col-span-2 items-center">
             <h2 class="font-medium text-4xl my-4">
@@ -124,23 +28,23 @@ function showProducts(products) {
             <a href="worksdetail.html?id=${product.id}" class="font-bold text-[16px] ">${product.description}.</a>
         </div>
     </div>`;
-    }
-    // return
-    return result;
+  }
+  // return
+  return result;
 }
 
-render("product", showProducts(works));
+render('product', showProducts(works));
 
 function showProduct(productss) {
-    // kiểm tra
-    if (!Array.isArray(user) || user.length === 0) return [];
+  // kiểm tra
+  if (!Array.isArray(user) || user.length === 0) return [];
 
-    // xử lý
-    let results = "";
-    // eslint-disable-next-line no-plusplus
-    for (let i = 0; i < productss.length; i++) {
-        const products = productss[i];
-        results += `<div class="order-2 text-center md:text-left md:w-[606px]">
+  // xử lý
+  let results = '';
+  // eslint-disable-next-line no-plusplus
+  for (let i = 0; i < productss.length; i++) {
+    const products = productss[i];
+    results += `<div class="order-2 text-center md:text-left md:w-[606px]">
         <h2 class="font-bold text-6xl my-6">
             ${products.title}
         </h2>
@@ -153,26 +57,26 @@ function showProduct(productss) {
         </button>
         </div>
     </div>
-     <div class="order-1 md:col-span-1 md:order-2 justify-self-end px-5 my-4 w-[400px]">
-        <img src="./src/img/${products.img}.jpg" class="mx-auto md:ml-auto w-full mx-16  rounded-full"  alt="" />
+     <div class="order-1 md:col-span-1 md:order-2 justify-self-end px-5 my-4 w-[350px]">
+        <img src="${products.img}" class="mx-auto md:ml-auto w-3/4 mx-16 justify-self-center md:justify-self-end md:w-full mx-16 rounded-full"  alt="" />
     </div>`;
-    }
-    // return
-    return results;
+  }
+  // return
+  return results;
 }
 
-render("user", showProduct(user));
+render('user', showProduct(user));
 
 function showProductz(productss) {
-    // kiểm tra
-    if (!Array.isArray(pots) || pots.length === 0) return [];
+  // kiểm tra
+  if (!Array.isArray(pots) || pots.length === 0) return [];
 
-    // xử lý
-    let resultsz = "";
-    // eslint-disable-next-line no-plusplus
-    for (let i = 0; i < productss.length; i++) {
-        const potss = productss[i];
-        resultsz += `<div class="bg-white p-5 my-5 ease-in-out duration-300 hover:shadow-xl hover:cursor-pointer group">
+  // xử lý
+  let resultsz = '';
+  // eslint-disable-next-line no-plusplus
+  for (let i = 0; i < productss.length; i++) {
+    const potss = productss[i];
+    resultsz += `<div class="bg-white p-5 my-5 ease-in-out duration-300 hover:shadow-xl hover:cursor-pointer group">
         <h2 class="font-bold text-4xl py-3">
             ${potss.title}
         </h2>
@@ -183,10 +87,9 @@ function showProductz(productss) {
         </p>
         <a href="" class="py-6 font-bold text-[16px]">${potss.description}</a>
     </div>`;
-    }
-    // return
-    return resultsz;
+  }
+  // return
+  return resultsz;
 }
 
->>>>>>> 73553ea3814a715d936688fa23a42b586ff23514
-render("pots", showProductz(pots));
+render('pots', showProductz(pots));
